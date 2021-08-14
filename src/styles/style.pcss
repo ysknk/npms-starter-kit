@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* NOTE: https://github.com/postcss/postcss-import */
+/* @import '_import/style.pcss'; */
+
+/* NOTE: https://github.com/postcss/postcss-mixins */
+@define-mixin icon $network, $color: blue {
+  .icon.is-$(network) {
+    color: $color;
+    @mixin-content;
+  }
+  .icon.is-$(network):hover {
+    color: white;
+    background: $color;
+  }
+}
+
+@mixin icon test {
+  background: url(test.png);
+}
+
+
+/* NOTE: https://github.com/postcss/postcss-simple-vars */
+body {
+  color: color(#ccc);
+  background: background(#aaa);
+}
+
+/* NOTE: https://github.com/postcss/postcss-nested */
+.section {
+  &__title {
+    font-size: 50px;
+  }
+}
