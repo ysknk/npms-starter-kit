@@ -41,5 +41,5 @@ imagemin([argv.src], {
   }
 }).then(() => {
   console.log('images optimized');
-})
+});
 
