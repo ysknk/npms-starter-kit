@@ -8,7 +8,7 @@
   |-[src] src dir
   |  |-[scripts]   js(jsx, vue, ts, etc...) files
   |  |-[templates] pug files
-  |  |-[styles]    postcss(pcss) files
+  |  |-[styles]    postcss(pcss) or stylus(styl) files
   |  |-[statics]   static files
   |  |-[images]    image(jpg,png,gif,svg) files
   |-[dist] dist dir
