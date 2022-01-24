@@ -16,6 +16,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-controls"
   ],
+  // NOTE: @storybook/html not working
   // "core": {
   //   "builder": "webpack5"
   // }
