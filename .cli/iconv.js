@@ -66,6 +66,6 @@ glob.sync(argv.src, {
     fs.writeFile(filepath, result, (err, data) => {
       // if (err) { throw err }
       console.log('encode: ' + filepath);
-    })
+    });
   })
-})
+});
