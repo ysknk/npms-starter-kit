@@ -61,7 +61,7 @@ glob.sync(argv.src, {
 
   fs.readFile(filepath, (err, data) => {
     // if (err) { throw err }
-    if (err) { return }
+    if (err) { return; }
 
     (async () => {
       const files = await del(filepath, {
@@ -71,6 +71,6 @@ glob.sync(argv.src, {
 
       const message = 'deleted: ';
       console.log(message + files.join('\n' + message));
-    })()
+    })();
   })
-})
+});
