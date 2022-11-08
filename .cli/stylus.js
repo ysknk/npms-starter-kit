@@ -35,7 +35,7 @@ const argv = yargs(process.argv.slice(2))
   .option('ext', {
     alias: 'e',
     description: 'Target Extention',
-    default: '.css'
+    default: '.css',
     demandOption: true
   })
   .option('ignore', {
