@@ -21,6 +21,9 @@
 ## How to use
 
 ``` sh
+# Git Clone
+git clone https://github.com/ysknk/npms-starter-kit.git
+
 # Init Install
 npm i
 
