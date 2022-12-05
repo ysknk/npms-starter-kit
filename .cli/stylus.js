@@ -12,7 +12,7 @@ const glob = require('glob');
 
 const argv = yargs(process.argv.slice(2))
   .option('cwd', {
-    alias: 'cwd',
+    alias: 'c',
     description: 'Current Working Directory',
     default: '',
     demandOption: false
