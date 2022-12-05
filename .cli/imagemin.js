@@ -6,10 +6,11 @@ const yargs = require('yargs');
 const path = require('path');
 
 const argv = yargs(process.argv.slice(2))
-  .option('base', {
-    alias: 'b',
-    description: 'Base Directory',
-    demandOption: true
+  .option('cwd', {
+    alias: 'cwd',
+    description: 'Current Working Directory',
+    default: '',
+    demandOption: false
   })
   .option('src', {
     alias: 's',
@@ -35,7 +36,7 @@ const options = require(path.resolve(argv.obj));
 imagemin([argv.src], {
   plugins: options.plugins,
   replaceOutputDir: output => {
-    const dest = output.replace(argv.base, argv.dest);
+    const dest = output.replace(argv.cwd, argv.dest);
     console.log('imagemin: ' + dest);
     return dest;
   }

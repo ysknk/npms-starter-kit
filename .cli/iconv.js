@@ -9,10 +9,11 @@ const path = require('path');
 const glob = require('glob');
 
 const argv = yargs(process.argv.slice(2))
-  .option('base', {
-    alias: 'b',
-    description: 'Base Directory',
-    demandOption: true
+  .option('cwd', {
+    alias: 'cwd',
+    description: 'Current Working Directory',
+    default: '',
+    demandOption: false
   })
   .option('src', {
     alias: 's',
@@ -32,7 +33,7 @@ const argv = yargs(process.argv.slice(2))
   })
   .option('to', {
     description: 'Encode To',
-    default: 'sjis',
+    default: 'utf-8',// sjis
     demandOption: false
   })
   .option('ext', {
@@ -44,7 +45,7 @@ const argv = yargs(process.argv.slice(2))
   .option('ignore', {
     alias: 'ig',
     description: 'Ignore Directory',
-    default: '**/_*',
+    default: '{**/_*,node_modules/**/*}',
     demandOption: false
   })
   .help()
@@ -52,7 +53,7 @@ const argv = yargs(process.argv.slice(2))
 
 glob.sync(argv.src, {
   ignore: argv.ignore,
-  cwd: argv.base
+  cwd: argv.cwd
 }).map((key) => {
   const filename = key.replace(/\.[^/.]+$/, '');
   const filepath = path.resolve(argv.dest, `${filename}${argv.ext}`);
