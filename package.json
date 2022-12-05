@@ -27,7 +27,7 @@
     "build": "run-p build:* --silent",
     "build:templates": "pug -O .pugrc.js \"src/templates\" -o \"./dist/\" -E html",
     "build:styles": "postcss \"src/styles/**/[!_]*.pcss\" --base \"./src/styles/\" --dir \"./dist/\" --ext css --verbose",
-    "build:stylus": "npm run stylus-cli -- -s \"**/[!_]*.styl\"",
+    "build:stylus": "npm run stylus-cli -- -s \"src/styles/**/[!_]*.styl\"",
     "build:scripts": "webpack",
     "build:images": "npm run imagemin-cli -- -s \"src/images/**/[!_]*.{jpg,png,gif,svg}\"",
     "build:statics": "cpx \"src/statics/**/[!_]*\" \"./dist/\" -v",
