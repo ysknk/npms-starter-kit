@@ -36,7 +36,7 @@ npm run build
 
 ### Storybook
 
-`@storybook/react` or `@storybook/vue`
+`@storybook/html`
 
 ## Base Compiler/Transpiler
 
