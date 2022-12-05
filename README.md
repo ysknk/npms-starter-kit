@@ -6,7 +6,7 @@
 [root] project root
   |-[.cli]
   |-[src] src dir
-  |  |-[scripts]   js(jsx, vue, ts, etc...) files
+  |  |-[scripts]   js files
   |  |-[templates] pug files
   |  |-[styles]    postcss(pcss) or stylus(styl) files
   |  |-[statics]   static files
