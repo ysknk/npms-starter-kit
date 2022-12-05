@@ -77,7 +77,6 @@
     "del-cli": "github:ysknk/del-cli",
     "dotenv": "^16.0.3",
     "eslint": "^8.27.0",
-    "eslint-plugin-react": "^7.31.10",
     "glob": "^8.0.3",
     "htmlhint": "^1.1.4",
     "iconv-lite": "^0.6.3",
