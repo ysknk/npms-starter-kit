@@ -22,7 +22,7 @@
 
 ``` sh
 # Git Clone
-git clone https://github.com/ysknk/npms-starter-kit.git
+git clone https://github.com/ysknk/npms-starter-kit.git _app
 
 # Init Install
 npm i
