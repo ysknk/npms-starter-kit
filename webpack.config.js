@@ -5,7 +5,7 @@ const entry = task.methods.getEntry()
 
 const webpack = require('webpack')
 const path = require('path')
-const { VueLoaderPlugin } = require("vue-loader");
+// const { VueLoaderPlugin } = require("vue-loader");
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 module.exports = {
@@ -43,10 +43,10 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': JSON.stringify(process.env),
-      __VUE_OPTIONS_API__: 'true',
-      __VUE_PROD_DEVTOOLS__: 'false'
+      // __VUE_OPTIONS_API__: 'true',
+      // __VUE_PROD_DEVTOOLS__: 'false'
     }),
-    new VueLoaderPlugin(),
+    // new VueLoaderPlugin(),
   ],
   resolve: {
     extensions: ['', '.vue', '.js', '.jsx', '.ts', '.tsx', '.json', '.coffee'],
@@ -61,10 +61,10 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         use: ['babel-loader']
       },
-      {
-        test: /\.vue$/,
-        use: ['vue-loader']
-      },
+      // {
+      //   test: /\.vue$/,
+      //   use: ['vue-loader']
+      // },
       {
         test: /\.tsx?$/,
         exclude: /(node_modules|bower_components)/,
