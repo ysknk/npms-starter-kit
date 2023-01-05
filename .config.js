@@ -5,7 +5,9 @@ const env = process.env.NODE_ENV
 const isProduction = env === 'production'
 const currentEnv = env || 'development'
 
-/* WIP */
+/*---------------------------
+ * WIP
+ */
 const dir = {
   src: `./src/`,
   dest: `./dist/`,
