@@ -8,7 +8,7 @@
   |-[src] src dir
   |  |-[scripts]   js files
   |  |-[templates] pug files
-  |  |-[styles]    postcss(pcss) or stylus(styl) files
+  |  |-[styles]    stylus(styl) files
   |  |-[statics]   static files
   |  |-[images]    image(jpg,png,gif,svg) files
   |-[dist] dist dir
@@ -36,7 +36,7 @@ npm run build
 
 ### Storybook
 
-`@storybook/html`
+`@storybook/html` from `npx storybook init --type html`
 
 ## Base Compiler/Transpiler
 
@@ -44,9 +44,6 @@ npm run build
 https://github.com/pugjs/pug-cli
 
 ### styles
-
-#### postcss
-https://github.com/postcss/postcss-cli
 
 #### stylus + nib
 https://github.com/stylus/stylus  
@@ -56,5 +53,6 @@ https://github.com/stylus/nib
 https://github.com/webpack/webpack
 
 ### images(min)
-https://github.com/imagemin/imagemin
+https://github.com/imagemin/imagemin  
+* default jpg,png -> webp
 
