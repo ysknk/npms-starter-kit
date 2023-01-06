@@ -54,5 +54,5 @@ https://github.com/webpack/webpack
 
 ### images(min)
 https://github.com/imagemin/imagemin  
-* default jpg,png -> webp
+`* default jpg,png -> webp`
 
