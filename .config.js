@@ -29,9 +29,6 @@ const paths = {
   styles: {
     src: `${cwd.styles}/**/*`,
     dest: `${dir.dest}`,
-    others: {
-      fSrc: `${cwd.styles}/functions`
-    }
   },
   scripts: {
     src: `${cwd.scripts}/**/*`,
@@ -66,25 +63,6 @@ const tasks = {
   styles: {
     ...paths.styles,
     ext: 'css',
-    methods: {
-      getFunctions: () => {
-        let modules = []
-        const entries = glob.sync('**/*.*', {
-          cwd: paths.styles.others.fSrc
-        }).map((key) => {
-          const data = methods.getFileData(key, paths.styles.others.fSrc)
-          modules.push(require(data.fullpath))
-          return methods.transformObject2Array(data)
-        })
-        let funcs = {}
-        modules.forEach((func) => {
-          Object.keys(func).forEach((name) => {
-            funcs[name] = func[name]
-          })
-        })
-        return funcs
-      }
-    }
   },
   scripts: {
     ...paths.scripts,
