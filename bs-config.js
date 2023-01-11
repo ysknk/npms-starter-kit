@@ -97,15 +97,14 @@ module.exports = {
     }
   },
   "tagNames": {
-    "less": "link",
-    "scss": "link",
-    "pcss": "link",
+    "styl": "link",
     "css": "link",
     "jpg": "img",
     "jpeg": "img",
     "png": "img",
     "svg": "img",
     "gif": "img",
+    "webp": "img",
     "js": "script"
   },
   "injectNotification": false

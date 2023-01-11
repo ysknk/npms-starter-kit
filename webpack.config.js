@@ -57,34 +57,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?jsx?$/,
+        test: /\.(c|m)?jsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: ['babel-loader']
       },
-      // {
-      //   test: /\.vue$/,
-      //   use: ['vue-loader']
-      // },
       {
         test: /\.tsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              appendTsSuffixTo: [/\.vue$/]
-            }
-          },
-          'babel-loader'
-        ]
+        use: ['ts-loader', 'babel-loader']
       },
       {
-        test: /\.p?css$/i,
+        test: /\.styl$/i,
         exclude: /(node_modules|bower_components)/,
-        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        use: ['style-loader', 'css-loader', 'stylus-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpe?g||gif|webp)$/i,
         exclude: /(node_modules|bower_components)/,
         type: 'asset/resource',
       },
