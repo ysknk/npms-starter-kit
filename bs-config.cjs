@@ -1,4 +1,4 @@
-const config = require('./.config.js')
+const dest =  './dist/'
 
 /*
  |--------------------------------------------------------------------------
@@ -17,7 +17,7 @@ module.exports = {
   "ui": {
     "port": 3001
   },
-  "files": [config.dir.dest],
+  "files": [dest],
   "watchEvents": [
     "change"
   ],
@@ -28,7 +28,7 @@ module.exports = {
     "ignoreInitial": true
   },
   "server": {
-    "baseDir": config.dir.dest
+    "baseDir": dest
   },
   "proxy": false,
   "port": 3000,
