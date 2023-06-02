@@ -1,4 +1,4 @@
-import config, { dir, currentEnv } from './.npms.configrc.js'
+import config, { currentEnv } from './.npms.configrc.js'
 import webpack from 'webpack'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -38,7 +38,7 @@ export default {
   entry,
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, dir.dest),
+    path: path.resolve(__dirname, config.scripts.dest),
   },
   plugins: [
     // fix "process is not defined" error:
