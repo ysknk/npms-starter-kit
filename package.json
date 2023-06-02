@@ -15,7 +15,7 @@
     "start": "npm run dev",
     "dev": "npm run watch",
     "generate": "npm run production:build --silent",
-    "serv": "browser-sync start --config bs-config.js",
+    "serv": "browser-sync start --config bs-config.cjs",
     "encode": "run-p encode:* --silent",
     "encode:templates": "iconv-lite -c \"src/templates/\" -s \"**/[!_]*.pug\" -e \".html\"",
     "encode:styles": "iconv-lite -c \"src/styles/\" -s \"**/[!_]*.styl\" -e \".css\"",
