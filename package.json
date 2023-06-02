@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
+  "type": "module",
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "ie >= 10",
+    "Android >= 4"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run dev",
@@ -33,8 +40,8 @@
     "watch:statics": "npm run build:statics -- -w --no-initial",
     "lint": "run-s lint:* --silent",
     "lint:templates": "htmlhint --config .htmlhintrc.js \"./dist/**/*.html\"",
-    "lint:styles": "stylelint --config .stylelintrc.js \"./dist/**/*.css\" -f verbose --aei --color",
-    "lint:scripts": "eslint -c .eslintrc.js \"./src/scripts/**/*\"",
+    "lint:styles": "stylelint --config .stylelintrc.cjs \"./dist/**/*.css\" -f verbose --aei --color",
+    "lint:scripts": "eslint -c .eslintrc.cjs \"./src/scripts/**/*\"",
     "production:build": "cross-env NODE_ENV=production npm run build --silent && npm run lint --silent",
     "development:build": "cross-env NODE_ENV=development npm run build --silent",
     "storybook": "start-storybook -p 6006",
@@ -73,6 +80,7 @@
     "css-loader": "^6.7.2",
     "dotenv": "^16.0.3",
     "eslint": "^8.29.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.8",
     "glob": "^8.0.3",
     "glob-del": "github:ysknk/glob-del",

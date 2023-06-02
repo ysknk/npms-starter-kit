@@ -1,18 +1,23 @@
+import config, { dir, currentEnv } from './.npms.configrc.js'
+import webpack from 'webpack'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 /* eslint-disable @typescript-eslint/no-var-requires */
-const config = require('./.config.js')
-const task = config.tasks.scripts
+const task = config.scripts
 const entry = task.methods.getEntry()
 
-const webpack = require('webpack')
-const path = require('path')
 // const { VueLoaderPlugin } = require("vue-loader");
 /* eslint-enable @typescript-eslint/no-var-requires */
 
-module.exports = {
+export default {
 //   mode: config.currentEnv === 'development'
 //     ? 'none'
 //     : config.currentEnv,
-  mode: config.currentEnv,
+  mode: currentEnv,
   target: ['web', 'es5'],
 
   cache: {
@@ -33,7 +38,7 @@ module.exports = {
   entry,
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, config.dir.dest),
+    path: path.resolve(__dirname, dir.dest),
   },
   plugins: [
     // fix "process is not defined" error:
