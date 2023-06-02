@@ -65,3 +65,4 @@ export default {
     dest: `${dir.dest}`
   }
 }
+
