@@ -14,10 +14,10 @@ const entry = task.methods.getEntry()
 /* eslint-enable @typescript-eslint/no-var-requires */
 
 export default {
-//   mode: config.currentEnv === 'development'
-//     ? 'none'
-//     : config.currentEnv,
-  mode: currentEnv,
+//  mode: currentEnv,
+  mode: currentEnv === 'development'
+    ? 'none'
+    : currentEnv,
   target: ['web', 'es5'],
 
   cache: {
