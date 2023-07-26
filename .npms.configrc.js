@@ -1,6 +1,9 @@
 import path from 'path'
 import glob from 'glob'
 
+// import { createRequire } from 'module'
+// const require = createRequire(import.meta.url)
+
 export const env = process.env.NODE_ENV
 export const isProduction = env === 'production'
 export const currentEnv = env || 'development'
