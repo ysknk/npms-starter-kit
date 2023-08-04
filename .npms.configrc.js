@@ -32,15 +32,17 @@ export const methods = {
   }
 }
 
+export const assetDir = `${dir.dest}assets/`
+
 export default {
   stylus: {
     cwd: `${cwd.styles}/`,
-    dest: `${dir.dest}`,
+    dest: `${assetDir}css/`,
     src: "**/[!_]*.styl"
   },
   scripts: {
     src: `${cwd.scripts}/**/*`,
-    dest: `${dir.dest}`,
+    dest: `${assetDir}js/`,
     methods: {
       getEntry: () => {
         const entries = glob.sync('**/*.*', {
@@ -57,7 +59,23 @@ export default {
   imagemin: {
     cwd: `${cwd.images}/`,
     src: "**/[!_]*.{jpg,png,gif,svg}",
-    dest: `${dir.dest}`,
+    dest: `${assetDir}img/`,
+
+//     plugins: [
+//       require('imagemin-pngquant')({
+//         quality: [0.4, 0.8]
+//       }),
+//       require('imagemin-mozjpeg')({
+//         quality: 85,
+//         progressive: true
+//       }),
+//       require('imagemin-gifsicle')(),
+//       require('imagemin-svgo')({
+//         plugins: [
+//           { name: 'removeViewBox', active: false }
+//         ]
+//       }),
+//     ]
   },
   iconvlite: {
     dest: `${dir.dest}`,
