@@ -4,7 +4,6 @@
 
 ``` bash
 [root] project root
-  |-[.cli]
   |-[src] src dir
   |  |-[scripts]   js files
   |  |-[templates] pug files
